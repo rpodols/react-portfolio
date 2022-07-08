@@ -2,7 +2,8 @@ import React from 'react';
 
 function Navigation(props) {
     const {
-        setContactSelected
+        setContactSelected,
+        setResumeSelected
     } = props;
 
   return (
@@ -16,7 +17,7 @@ function Navigation(props) {
             <nav>
                 <ul className="header-format">
                     <li>
-                        <a data-testid="about" href = "/" onClick={() => setContactSelected(false)}>
+                        <a data-testid="about" href = "/" onClick={() => setContactSelected(false) && setResumeSelected(false)}>
                             About Me
                         </a>
                     </li>
@@ -26,7 +27,7 @@ function Navigation(props) {
                         </a>
                     </li>
                     <li>
-                        <a href = "#resume">
+                        <a href = "#resume" onClick={() => setResumeSelected(true)}>
                             Resume
                         </a>
                     </li>
