@@ -1,9 +1,15 @@
 import React from 'react';
 
 function Navigation(props) {
+    const options = [
+        "About",
+        "Portfolio",
+        "Resume",
+        "Contact"
+    ];
+
     const {
-        setContactSelected,
-        setResumeSelected
+        setPageSelected
     } = props;
 
   return (
@@ -16,26 +22,11 @@ function Navigation(props) {
             </h2>
             <nav>
                 <ul className="header-format">
+                    {options.map((options) => (
                     <li>
-                        <a data-testid="about" href = "/" onClick={() => setContactSelected(false) && setResumeSelected(false)}>
-                            About Me
-                        </a>
+                        <a href={"#" + options.toLowerCase()} className={props.currentPage === options} onClick={() => props.setPageSelected(options)}>{options}</a>
                     </li>
-                    <li>
-                        <a href = "#portfolio">
-                            Portfolio
-                        </a>
-                    </li>
-                    <li>
-                        <a href = "#resume" onClick={() => setResumeSelected(true)}>
-                            Resume
-                        </a>
-                    </li>
-                    <li>
-                        <a href = "#contact" onClick={() => setContactSelected(true)}>
-                            Contact
-                        </a>
-                    </li>
+                    ))}
                 </ul>
             </nav>
         </div>

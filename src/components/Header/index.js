@@ -3,27 +3,38 @@ import About from '../About';
 import Navigation from '../Nav';
 import Resume from '../Resume';
 import Portfolio from '../Portfolio';
-import ContactForm from '../Contact';
+import Contact from '../Contact';
 
 function Header() {
-    const [contactSelected, setContactSelected] = useState(false); 
-    const [resumeSelected, setResumeSelected] = useState(false); 
+
+const [currentComponent, setPageSelected] = useState("About"); 
+
+const currentPage = () => {
+    switch(currentComponent) {
+        case "About":
+            return <About />;
+        case "Portfolio":
+            return <Portfolio />;
+        case "Resume":
+            return <Resume />;
+        case "Contact":
+            return <Contact />;
+        default:
+            return <About />;
+    }
+}
+
   return (
     <div>
     <Navigation
-      contactSelected={contactSelected}
-      setContactSelected={setContactSelected}
-      resumeSelected={resumeSelected}
-      setResumeSelected={setResumeSelected}
-      ></Navigation>
+        currentComponent={currentComponent}
+        setPageSelected={setPageSelected}
+    ></Navigation>
       <main>
-      {!contactSelected ? (
-        <>
-          <About></About>
-        </>
-      ) : (
-        <ContactForm></ContactForm>
-      )}
+        <div>
+            {currentPage(currentComponent)}
+        </div>
+
       </main>
       </div>
   )
