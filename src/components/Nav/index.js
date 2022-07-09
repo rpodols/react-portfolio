@@ -8,10 +8,6 @@ function Navigation(props) {
         "Contact"
     ];
 
-    const {
-        setPageSelected
-    } = props;
-
   return (
     <header>
         <div className="background-header">

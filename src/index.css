@@ -45,3 +45,24 @@ a {
   width: 50px;
   height: 50px;
 }
+
+.portfolio-image {
+  border-style: solid;
+  border-width: medium;
+  border-color: black;
+  border-radius: 10%;
+  margin: 3%, 3%, 3%, 3%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+  width: 33%;
+  margin: 2.5%;
+}
+
+.portfolio-box{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+}

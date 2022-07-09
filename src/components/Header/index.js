@@ -14,7 +14,10 @@ const currentPage = () => {
         case "About":
             return <About />;
         case "Portfolio":
-            return <Portfolio />;
+            return <Portfolio 
+            currentComponent={currentComponent}
+            setPageSelected={setPageSelected}
+            />;
         case "Resume":
             return <Resume />;
         case "Contact":
