@@ -5,9 +5,10 @@ import Resume from '../Resume';
 import Portfolio from '../Portfolio';
 import Contact from '../Contact';
 
-function Header() {
+function Header(props) {
 
 const [currentComponent, setPageSelected] = useState("About"); 
+const [currentClick, setCurrentClick] = useState("About"); 
 
 const currentPage = () => {
     switch(currentComponent) {
@@ -27,12 +28,18 @@ const currentPage = () => {
     }
 }
 
+
+
   return (
     <div>
+        
     <Navigation
         currentComponent={currentComponent}
         setPageSelected={setPageSelected}
+        currentClick={currentClick}
+        setCurrentClick={setCurrentClick}
     ></Navigation>
+
       <main>
         <div>
             {currentPage(currentComponent)}

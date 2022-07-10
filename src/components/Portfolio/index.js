@@ -9,28 +9,40 @@ import passwordImage from "../../assets/images/password.png";
 const portfolioPages = [
     {
         name: 'The Zen Project',
-        image: zenImage
+        image: zenImage,
+        github: "https://github.com/rpodols/the-zen-project",
+        deployed: "https://rpodols.github.io/the-zen-project/index.html"
     },
     { 
         name: 'Total Tech News', 
-        image: newsImage
+        image: newsImage,
+        github: "https://github.com/rpodols/total-tech-blog",
+        deployed: "https://limitless-springs-36362.herokuapp.com/"
     }
     ,
     { 
         name: 'Expense Tracker', 
-        image: expenseImage
+        image: expenseImage,
+        github: "https://github.com/rpodols/invoice-tracker",
+        deployed: "https://fast-plains-66827.herokuapp.com/"
     },
     { 
         name: 'Weather Dashboard', 
-        image: weatherImage
+        image: weatherImage,
+        github: "https://github.com/rpodols/weather-dashboard",
+        deployed: "https://rpodols.github.io/weather-dashboard/"
     },
     { 
         name: 'Code Quiz', 
-        image: quizImage
+        image: quizImage,
+        github: "https://github.com/rpodols/code-quiz",
+        deployed: "https://rpodols.github.io/code-quiz/"
     },
     { 
         name: 'Password Generator', 
-        image: passwordImage
+        image: passwordImage,
+        github: "https://github.com/rpodols/password-generator",
+        deployed: "https://rpodols.github.io/password-generator/"
     },
   ];
 
@@ -50,6 +62,9 @@ function Portfolio() {
                 <div className="portfolio-image">
                     <img src={portfolioPage.image} alt="Portfolio item preview screencap." />
                     <p className="header-format">{portfolioPage.name}</p>
+                    <a className="header-format" href={portfolioPage.github}>Github Link!</a>
+                    <a className="header-format" href={portfolioPage.deployed}>Deployed Link!</a>
+                    <hr></hr>
                 </div>
             ))}
         </div>

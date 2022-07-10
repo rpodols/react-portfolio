@@ -66,3 +66,17 @@ a {
   flex-wrap: wrap;
 
 }
+
+.navClick {
+  background-color: #757575
+}
+
+.navOff {
+  background-color: #ffffff;
+}
+
+button {
+  background: none!important;
+  border: none;
+  color: black;
+}
