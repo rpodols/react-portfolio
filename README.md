@@ -77,8 +77,8 @@ Starting from scratch, this challenge required writing code to do the following:
 * any questions, please feel free to reach out via email to rdpodols@gmail.com
 
 ## Link to Project & Screenshot
-![react-portfolio Screenshot)](/public/assets/images/applicationImage.png)
-[Click here to view the project on GitHub!](https://github.com/rpodols/)
+![react-portfolio Screenshot)](/src/assets/images/applicationImage.png)
+[Click here to view the project on GitHub!](https://github.com/rpodols/react-portfolio)
 
 
 

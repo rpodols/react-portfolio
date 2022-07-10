@@ -75,8 +75,16 @@ a {
   background-color: #ffffff;
 }
 
-button {
+.link-button {
   background: none!important;
   border: none;
   color: black;
+}
+
+.form-format {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
