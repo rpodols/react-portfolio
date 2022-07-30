@@ -5,6 +5,7 @@ import expenseImage from "../../assets/images/expense.png";
 import weatherImage from "../../assets/images/weather.png";
 import quizImage from "../../assets/images/quiz.png";
 import passwordImage from "../../assets/images/password.png";
+import gooseImage from "../../assets/images/goose.png"
 
 const portfolioPages = [
     {
@@ -44,6 +45,12 @@ const portfolioPages = [
         github: "https://github.com/rpodols/password-generator",
         deployed: "https://rpodols.github.io/password-generator/"
     },
+    {
+        name: 'goose.net',
+        image: gooseImage,
+        github: "https://github.com/rpodols/goose.net",
+        deployed: "https://morning-bayou-26643.herokuapp.com/"
+    }
   ];
 
   function Project() {
